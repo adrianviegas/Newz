@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Activity.SplashActivity">
+
+    <RelativeLayout
+        android:id="@+id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--android:id="@+id/bMenuLogin"-->
+        <TextView
+            android:id="@+id/bLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="LOGIN" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageView
+            android:id="@+id/bBacktoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/arrow_back" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/llLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menuBar"
+
+        android:layout_centerInParent="true"
+        android:scrollbarThumbHorizontal="@null"
+        android:scrollbarThumbVertical="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo512" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:hint="Email" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:hint="Password" />
+
+            <!--<Button-->
+            <!--android:id="@+id/bLogin"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignEnd="@+id/editText2"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignRight="@+id/editText2"-->
+            <!--android:layout_below="@+id/editText2"-->
+            <!--android:background="@color/com_auth0_lock_result_message_success_background"-->
+            <!--android:text="Login"-->
+            <!--android:textColor="@color/white" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/bCreateAccount"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignEnd="@+id/editText2"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignRight="@+id/editText2"-->
+            <!--android:layout_below="@+id/editText2"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:background="@color/com_auth0_lock_result_message_success_background"-->
+            <!--android:text="Create Account"-->
+            <!--android:textColor="@color/white" />-->
+
+            <!--      <TextView
+                      android:id="@+id/tvForgotPassword"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_alignEnd="@+id/button"
+                      android:layout_alignParentLeft="true"
+                      android:layout_alignParentStart="true"
+                      android:layout_alignRight="@+id/button"
+                      android:layout_below="@+id/button"
+                      android:gravity="center"
+                      android:text="Forgot Password?"
+                      android:textColor="@color/white" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/your_id"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_below="@+id/Id_of__view_present_above"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:background="#c0c0c0"-->
+            <!--android:text="OR" />-->
+            <!--<TextView-->
+
+            <!--android:id="@+id/app_name"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/ivLogo"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="@string/app_name"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="30sp" />-->
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/bFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/bGooglePlus"
+                android:layout_alignLeft="@+id/bGooglePlus"
+                android:layout_alignRight="@+id/bGooglePlus"
+                android:layout_alignStart="@+id/bGooglePlus"
+                android:layout_below="@+id/app_name"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:paddingTop="@dimen/activity_horizontal_margin" />
+            <!---->
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/bGooglePlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bFacebook"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                app:buttonSize="wide" />
+
+            <TextView
+                android:id="@+id/bCreateAccount"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="@string/don_t_have_an_account_u_create_account_u" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ScrollView
+        android:id="@+id/llSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menuBar"
+
+        android:layout_centerInParent="true"
+        android:scrollbarThumbHorizontal="@null"
+        android:scrollbarThumbVertical="@null"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivLogo2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logo512"
+                android:tint="@color/blue" />
+
+            <EditText
+                android:id="@+id/etSignupEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:hint="Email" />
+
+            <EditText
+                android:id="@+id/etSignupPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/etSignupConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/etSignupPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText"
+                android:ems="10"
+                android:hint="Phone"
+                android:inputType="number" />
+
+            <!--<Button-->
+            <!--android:id="@+id/bRCreateAccount"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignEnd="@+id/editText2"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignRight="@+id/editText2"-->
+            <!--android:layout_below="@+id/editText2"-->
+            <!--android:background="@color/com_auth0_lock_result_message_success_background"-->
+            <!--android:text="Create Account"-->
+            <!--android:textColor="@color/white" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/bBacktoLogin"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignEnd="@+id/editText2"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignRight="@+id/editText2"-->
+            <!--android:layout_below="@+id/editText2"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:background="@color/com_auth0_lock_result_message_success_background"-->
+            <!--android:text="Back to Login"-->
+            <!--android:textColor="@color/white" />-->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

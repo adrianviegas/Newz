@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:actionBarWidgetTheme">@style/YourActionBarWidget</item>
+        <!--<item name="android:textColorSecondary">@color/white</item>-->
+
+    </style>
+
+    <style name="AppTheme.Custom" parent="AppTheme">
+        <!--<item name="android:actionBarWidgetTheme">@style/YourActionBarWidget</item>-->
+        <item name="android:textColorSecondary">@color/white</item>
+
+    </style>
+
+    <style name="RatingBar" parent="android:style/Widget.Material.RatingBar.Small">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:textColorPrimary">@color/myTextPrimaryColor</item>-->
+        <!--<item name="android:navigationBarColor">@color/myNavigationColor</item>-->
+        <!--<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>-->
+    </style>
+
+    <!--<style name="AppStyle.MdToolbar" parent="MdToolbar">-->
+
+    <!--</style>-->
+
+    <style name="YourActionBarWidget" parent="android:Theme.Holo.Light">
+        <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
+        <item name="android:dropDownListViewStyle">
+            @android:style/Widget.Holo.Light.ListView.DropDown
+        </item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

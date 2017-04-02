@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+
+    tools:context=".Activity.MainActivity">
+
+    <!--<com.lorentzos.flingswipe.SwipeFlingAdapterView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:id="@+id/frame"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:max_visible="4"-->
+    <!--app:min_adapter_stack="6"-->
+    <!--app:rotation_degrees="16" />-->
+
+    <!--<ListView-->
+    <!--android:id="@+id/listView"-->
+
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:background="@color/white"></ListView>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="match_parent">
+
+        <com.wenchao.cardstack.CardStack
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvReplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Great! you have read all news. Search more!"
+        android:visibility="gone" />
+</RelativeLayout>
